@@ -29,7 +29,7 @@ fn add_texture_to_resources(
     mut textures: ResMut<Assets<Texture>>,
 ) {
     let texture_handle = asset_server.load("texture.png");
-    commands.spawn_bundle(SpriteBundle {
+    commands.spawn(SpriteBundle {
         texture: texture_handle,
         ..Default::default()
     });
